@@ -1,8 +1,8 @@
 {
     "scanner": {
-        "name": "Taro Web Vulnerability Scanner",
+        "name": "Taro Web  Scanner",
         "version": "3.0",
-        "author": "Cybersecurity Professional",
+        "author": "AymanCsharp",
         "description": "Advanced web vulnerability scanner with comprehensive security testing capabilities"
     },
     "scanning": {
@@ -56,3 +56,4 @@
         }
     }
 }
+
