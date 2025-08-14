@@ -1,0 +1,58 @@
+{
+    "scanner": {
+        "name": "Taro Web Vulnerability Scanner",
+        "version": "3.0",
+        "author": "Cybersecurity Professional",
+        "description": "Advanced web vulnerability scanner with comprehensive security testing capabilities"
+    },
+    "scanning": {
+        "timeout": 10,
+        "max_threads": 20,
+        "max_workers": 10,
+        "delay_between_requests": 1,
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    },
+    "ports": {
+        "common_ports": [21, 22, 23, 25, 53, 80, 110, 143, 443, 993, 995, 3306, 3389, 5432, 5900, 6379, 8080, 8443, 27017],
+        "scan_range": "1-1000",
+        "nmap_arguments": "-sS -sV -O --version-intensity 5"
+    },
+    "directories": {
+        "admin_paths": ["admin", "login", "wp-admin", "administrator", "admin1", "admin2", "adm", "moderator", "webadmin"],
+        "common_paths": ["backup", "bak", "old", "test", "dev", "staging", "beta", "config", "conf", "settings"],
+        "file_extensions": [".php", ".html", ".htm", ".asp", ".aspx", ".jsp", ".do", ".action", ".cgi"]
+    },
+    "payloads": {
+        "sql_injection": ["'", "1' OR '1'='1", "1' AND '1'='2", "1' UNION SELECT NULL--"],
+        "xss": ["<script>alert('XSS')</script>", "<img src=x onerror=alert('XSS')>", "javascript:alert('XSS')"],
+        "command_injection": ["; ls", "| whoami", "& dir", "`id`", "$(id)"]
+    },
+    "cms": {
+        "wordpress": ["wp-content", "wp-includes", "wp-admin", "wp-json", "wp-login.php"],
+        "joomla": ["joomla", "com_content", "mod_", "index.php?option=com_"],
+        "drupal": ["drupal", "sites/default", "modules/", "themes/", "sites/all"],
+        "magento": ["magento", "skin/frontend", "app/design/", "Mage.", "Varien_"]
+    },
+    "subdomains": {
+        "common": ["www", "mail", "ftp", "localhost", "webmail", "smtp", "pop", "ns1", "webdisk", "pop3"],
+        "admin": ["admin", "forum", "news", "vpn", "ns1", "http", "ns2", "smtp", "secure"],
+        "development": ["staging", "beta", "api", "cdn", "static", "media", "files", "download", "upload"]
+    },
+    "output": {
+        "save_results": true,
+        "output_format": "txt",
+        "output_directory": "results",
+        "include_timestamp": true,
+        "log_level": "INFO"
+    },
+    "security": {
+        "respect_robots_txt": true,
+        "max_requests_per_second": 10,
+        "randomize_user_agent": false,
+        "use_proxy": false,
+        "proxy_settings": {
+            "http": null,
+            "https": null
+        }
+    }
+}
