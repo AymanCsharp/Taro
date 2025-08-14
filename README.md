@@ -1,8 +1,6 @@
-# Taro Web  Scanner
 
 A powerful and comprehensive web vulnerability scanner with an ASCII art interface designed for cybersecurity professionals
 
-## Features
 
 - **Port Scanner**: Comprehensive port scanning with service detection
 - **Web Vulnerability Scanner**: Detects common web vulnerabilities
@@ -15,7 +13,6 @@ A powerful and comprehensive web vulnerability scanner with an ASCII art interfa
 - **CMS Detection**: Content Management System identification
 - **Comprehensive Security Scan**: Full security assessment
 
-## Installation
 
 1. **Clone or download the repository**
 2. **Install Python dependencies:**
@@ -70,11 +67,9 @@ A powerful and comprehensive web vulnerability scanner with an ASCII art interfa
 - `25` - Full Comprehensive Scan
 - `0` - Exit
 
-## Security Notice
 
 This tool is designed for authorized security testing and penetration testing purposes only. Always ensure you have proper authorization before scanning any target systems. Unauthorized scanning may be illegal in many jurisdictions.
 
-## Requirements
 
 - Python 3.7+
 - Nmap
@@ -83,3 +78,4 @@ This tool is designed for authorized security testing and penetration testing pu
 ## Disclaimer
 
 This tool is provided for educational and authorized security testing purposes only. The authors are not responsible for any misuse or damage caused by this tool. Users must comply with all applicable laws and regulations.
+
